@@ -30,19 +30,5 @@ namespace WebApi.Hal.Web.Api
             return new BeerStyleListRepresentation(beerStyles);
         }
 
-        public HttpResponseMessage Get(int id)
-        {
-            var beerStyle = beerDbContext.Styles.SingleOrDefault(s => s.Id == id);
-            if (beerStyle == null)
-                return Request.CreateResponse(HttpStatusCode.NotFound);
-
-            var beerStyleResource = new BeerStyleRepresentation
-            {
-                Id = beerStyle.Id,
-                Name = beerStyle.Name
-            };
-
-            return Request.CreateResponse(HttpStatusCode.OK, beerStyleResource);
-        }
     }
 }

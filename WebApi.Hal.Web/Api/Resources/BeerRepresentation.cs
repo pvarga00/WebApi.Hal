@@ -31,6 +31,8 @@ namespace WebApi.Hal.Web.Api.Resources
 
         protected override void CreateHypermedia()
         {
+            Links.Add(LinkTemplates.Beers.AllBeers);
+
             if (StyleId != null)
                 Links.Add(LinkTemplates.BeerStyles.Style.CreateLink(new { id = StyleId }));
             if (BreweryId != null)

@@ -18,6 +18,11 @@
             /// /breweries/{id}/beers
             /// </summary>
             public static Link AssociatedBeers { get { return new Link("beers", "~/breweries/{id}/beers{?page}"); } }
+
+            /// <summary>
+            /// /beers
+            /// </summary>
+            public static Link Beers { get { return new Link("beers", "~/beers"); } }
         }
 
         public static class BeerStyles
@@ -35,7 +40,12 @@
             /// <summary>
             /// /styles/{id}
             /// </summary>
-            public static Link Style { get { return new Link("style", "~/styles/{id}"); } }
+            public static Link Style { get { return new Link("style", "~/style/{id}"); } }
+
+            /// <summary>
+            /// /beers
+            /// </summary>
+            public static Link Beers { get { return new Link("beers", "~/beers"); } }
         }
 
         public static class Beers
@@ -53,12 +63,22 @@
             /// <summary>
             /// /beers/{id}
             /// </summary>
-            public static Link Beer { get { return new Link("beer", "~/beers/{id}"); } }
+            public static Link Beer { get { return new Link("beer", "~/beer/{id}"); } }
+
+            /// <summary>
+            /// /beers
+            /// </summary>
+            public static Link AllBeers { get { return new Link("beers", "~/beers"); } }
         }
 
         public static class BeerDetails
         {
             public static Link GetBeerDetail { get { return new Link("beerdetail", "~/beerdetail/{id}"); } }
+
+            /// <summary>
+            /// /beers
+            /// </summary>
+            public static Link Beers { get { return new Link("beers", "~/beers"); } }
         }
 
         public static class Reviews
@@ -67,6 +87,11 @@
             /// /beers/{id}/reviews/{rid}
             /// </summary>
             public static Link GetBeerReview { get { return new Link("review", "~/beers/{id}/reviews/{rid}"); } }
+
+            /// <summary>
+            /// /beers
+            /// </summary>
+            public static Link Beers { get { return new Link("beers", "~/beers"); } }
         }
     }
 }
